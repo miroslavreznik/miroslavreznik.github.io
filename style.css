@@ -1,7 +1,8 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
 }
 
 .container {
@@ -10,8 +11,8 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #2c3e50;
+    color: #ecf0f1;
     padding: 1rem 0;
 }
 
@@ -35,30 +36,42 @@ section {
 }
 
 #hero {
-    background-color: #f4f4f4;
+    background-color: #3498db;
     text-align: center;
+    color: #fff;
+    padding: 100px 0;
 }
 
 #hero h2 {
-    color: #333;
+    font-size: 2.5em;
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #2c3e50;
+    color: #ecf0f1;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #34495e;
 }
 
 #about, #services, #portfolio, #contact {
     background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 30px;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #2c3e50;
+    color: #ecf0f1;
     text-align: center;
     padding: 1rem 0;
 }
+
