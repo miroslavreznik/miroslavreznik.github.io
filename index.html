@@ -84,5 +84,39 @@
             <p>&copy; By Miroslav Reznik in 2024. Created mostly by AI during one evening with close to zero knowledge</p>
         </div>
     </footer>
+    <!-- JavaScript for smooth scrolling and fade-in animation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Fade-in animation for sections
+            const sections = document.querySelectorAll('.container');
+            const options = {
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
